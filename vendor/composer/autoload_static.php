@@ -20,16 +20,11 @@ class ComposerStaticInit2f5f01266b70831c6b3ba98b0236ae4a
         ),
     );
 
-    public static $classMap = array (
-        'JasX\\Got\\JsonAssetRest' => __DIR__ . '/../..' . '/src/JasX/Got/class JsonAssetRest.php',
-    );
-
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit2f5f01266b70831c6b3ba98b0236ae4a::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit2f5f01266b70831c6b3ba98b0236ae4a::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit2f5f01266b70831c6b3ba98b0236ae4a::$classMap;
 
         }, null, ClassLoader::class);
     }
