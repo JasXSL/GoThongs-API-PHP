@@ -1,5 +1,5 @@
 {
-    "name": "jasxsl/got/gotapi",
+    "name": "jasxsl/got-api",
     "description": "PHP Libraries for JasX GoThongs game",
     "type": "library",
     "license": "GPL v3",
