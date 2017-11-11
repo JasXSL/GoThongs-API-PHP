@@ -11,8 +11,7 @@ Include the composer autoload: `require __DIR__.'/vendor/autoload.php'`
 
 Create a class and initialize it:
 
-<pre>
-
+```
 require __DIR__.'/vendor/autoload.php';
 use JasX\Got\JsonAssetRest as JsonAssetRest;
 
@@ -24,34 +23,33 @@ class Handler extends JsonAssetRest{
     $asset = ID of the asset. You can see this in the address bar of the GoThongs mod editor for eahc asset
     $uuid = (Not always present) An SL UUID of the agent making the request 
   */
-    static function onCall($type, $asset, $uuid){ 
+  static function onCall($type, $asset, $uuid){ 
         
-    // Example of overriding a book
-        if($type === 'GotBook'){
+  // Example of overriding a book
+  if($type === 'GotBook'){
 
       // This was asset #1 (You can see the asset ID in the URL bar of the GoT mod tool editor)
-            if($asset === 1)
+      if($asset === 1)
         
-        // We can return one or more parameters to be overriden by the defaults set in the mod tool editor.
-        // Books only accept 'pages' though which is an array of text to put on each page of the book
-                return array(
-                    'pages' => [
-                        'Page one', 'Page two'
-                    ]
-                );
+          // We can return one or more parameters to be overriden by the defaults set in the mod tool editor.
+          // Books only accept 'pages' though which is an array of text to put on each page of the book
+          return array(
+              'pages' => [
+                  'Page one', 'Page two'
+              ]
+          );
 
-        }
+      }
 
-        return array(); 
+      return array(); 
     
-    }
+  }
 
 }
 
 // Put your API token here
 Handler::ini("1.47d81e2682b3f97911da4f8dc18b3fd87a614338cd20b268676ac73dd9758");
-
-</pre>
+```
 
 ## Accepted types and data fields
 
