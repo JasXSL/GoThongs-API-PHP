@@ -10,8 +10,9 @@ PHP Library for GoThongs JSON hooks.
 Include the composer autoload: `require __DIR__.'/vendor/autoload.php'`
 
 Create a class and initialize it:
+
 <pre>
-<?php
+
 require __DIR__.'/vendor/autoload.php';
 use JasX\Got\JsonAssetRest as JsonAssetRest;
 
