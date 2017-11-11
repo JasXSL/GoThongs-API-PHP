@@ -1,0 +1,13 @@
+{
+    "name": "JasXSL/gotApi",
+    "description": "PHP Libraries for JasX GoThongs game",
+    "type": "library",
+    "license": "GPL v3",
+    "authors": [
+        {
+            "name": "JasX",
+            "email": "jasxsecondlife@gmail.com"
+        }
+    ],
+    "require": {}
+}
