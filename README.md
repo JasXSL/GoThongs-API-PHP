@@ -47,9 +47,11 @@ class Handler extends JsonAssetRest{
 
 }
 
-// Put your API token here
+// Put your JSON KEY from your got mod settings here
 Handler::ini("1.47d81e2682b3f97911da4f8dc18b3fd87a614338cd20b268676ac73dd9758");
 ```
+
+Copy the URL where you hosted your PHP file and paste that into the JSON Webhook box on your mod's settings page on jasx.org/lsl/got and hit save.
 
 ## Accepted types and data fields
 
