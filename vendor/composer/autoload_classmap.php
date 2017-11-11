@@ -6,4 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'JasX\\Got\\JsonAssetRest' => $baseDir . '/src/JasX/Got/class JsonAssetRest.php',
 );
