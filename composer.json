@@ -11,8 +11,8 @@
     ],
     "require": {},
 	"autoload" : {
-		"psr-0": {
-			"JasX\\Got" : "src/"
+		"psr-4": {
+			"JasX\\Got\\" : "src/"
 		}
 	}
 }
