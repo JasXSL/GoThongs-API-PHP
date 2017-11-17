@@ -19,7 +19,12 @@ use JasX\Got\Api\WebhookServer as WebhookServer;
 // Extend the server
 class Handler extends WebhookServer{
 
-	// This is the input method in which you build and return your custom asset data
+	/*
+		This is where you handle your request logic
+		$type = type of asset, see below for a full list of featured assets
+		$asset = ID of the asset. You can see this in the address bar of the GoThongs mod editor for each asset
+		$uuid = (Not always present) An SL UUID of the agent making the request 
+	*/
 	static function onCall($type, $asset, $uuid){ 
 		
 		// A book asset was requested
