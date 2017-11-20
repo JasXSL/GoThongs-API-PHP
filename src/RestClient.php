@@ -51,7 +51,8 @@ class RestClient{
 
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
 		
-		$server_output = (array)json_decode(curl_exec($ch), true);
+		$raw = curl_exec($ch);
+		$server_output = (array)json_decode($raw, true);
 		
 		curl_close ($ch);
 		$this->tasks = [];
@@ -60,6 +61,12 @@ class RestClient{
 			
 			$this->errors = $server_output['errors'];
 			return false;
+
+		}
+
+		if( !isset($server_output['jsonapi']) ){
+
+			throw new \Exception("Server error. Server responded with: ".$raw);
 
 		}
 
