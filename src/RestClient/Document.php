@@ -14,8 +14,11 @@ class Document{
 		"type" => ""
 	);
 	public $custom_meta = [];
+	public $links = NULL;
 
 	public function __construct( array $data ){
+
+		$this->links = new \stdClass(); 
 
 		if( isset($data['errors']) )
 			$this->errors = $data['errors'];
@@ -31,7 +34,6 @@ class Document{
 					
 					if( isset($this->meta[$key]) )
 						$this->meta[$key] = $val;
-					
 					else
 						$this->custom_meta[$key] = $val;
 
@@ -39,11 +41,11 @@ class Document{
 
 			}
 
-			if( isset($data['included']) ){
-
+			if( isset($data['included']) )
 				$this->included = $this->arrayToResources($data['included']);
 
-			}
+			if( isset($data['links']) )
+				$this->links = (object)$data['links'];
 
 			
 		}
@@ -91,6 +93,7 @@ class Document{
 
 			if( $resource->id == $id && $resource->type == $type )
 				return $resource;
+			
 
 		}
 
